@@ -9,7 +9,12 @@ export default {
   ],
   theme: {
   	extend: {
+		fontFamily: {
+			sleepy: ['BNSleepyHollow-Clean', 'sans-serif'],
+		  },
   		colors: {
+			white: '#fefdf0',
+			black: '#030303',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {

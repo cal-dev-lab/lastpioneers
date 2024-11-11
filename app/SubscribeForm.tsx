@@ -32,7 +32,7 @@ const SubscribeForm = () => {
     };
 
     return (
-        <div>
+        <div id="mailing-list">
             <h2>Subscribe to our Newsletter</h2>
             <form onSubmit={handleSubmit}>
                 <input
