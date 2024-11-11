@@ -1,5 +1,6 @@
 "use client"
 import { useState } from 'react';
+import { Button } from "@/components/ui/button"
 
 const SubscribeForm = () => {
     const [email, setEmail] = useState('');
@@ -7,8 +8,6 @@ const SubscribeForm = () => {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-
-        console.log("submitting email: ", email)
 
         try {
             const res = await fetch('/api/subscribe', {
@@ -43,7 +42,7 @@ const SubscribeForm = () => {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email"
                 />
-                <button type="submit">Subscribe</button>
+                <Button disabled={!email} type="submit">Subscribe</Button>
             </form>
             {status && <p>{status}</p>}
         </div>

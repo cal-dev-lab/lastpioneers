@@ -19,9 +19,9 @@ export async function POST(req: NextRequest, res: NextApiResponse) {
     const body = await req.json();
     const { email_address } = body;
 
-    if (!email_address) {
+    if (!email_address || email_address == "" || email_address.trim() == "" || email_address == null) {
         return new Response(
-            JSON.stringify({ error: 'Email is required' }),
+            JSON.stringify({ error: 'Email is required' }), {status: 400},
         );
     }
 
@@ -54,7 +54,7 @@ export async function POST(req: NextRequest, res: NextApiResponse) {
             status: 'subscribed',
         });
 
-        if (response && response.status === 'subscribed') {
+        if (response.status === 'subscribed') {
             return new Response(
                 JSON.stringify({ message: 'Subscribed successfully', response }),
                 { status: 200 }
