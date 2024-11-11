@@ -26,21 +26,40 @@ export async function POST(req: NextRequest, res: NextApiResponse) {
     }
 
     try {
+        try {
+            const existingMember = await mailchimp.lists.getListMember(
+                "6d3722568c",
+                email_address.toLowerCase()
+            );
+            
+            if (existingMember) {
+                return new Response(
+                    JSON.stringify({ error: 'This email is already subscribed' }),
+                    { status: 400 }
+                );
+            }
+        } catch (error: any) {
+            // If the error is not a 404, throw it
+            if (error.status !== 404) {
+                console.error("Error checking existing email:", error);
+                return new Response(
+                    JSON.stringify({ error: 'An error occurred while checking email' }),
+                    { status: 500 }
+                )
+            }
+        }
+
         const response = await mailchimp.lists.addListMember("6d3722568c", {
             email_address: email_address,
             status: 'subscribed',
         });
 
-    console.log("response: ", response)
-
-
-    if (response && response.status === 'subscribed') {
-        return new Response(
-            JSON.stringify({ message: 'Subscribed successfully', response }),
-            { status: 200 }
-        );
-    }
-    
+        if (response && response.status === 'subscribed') {
+            return new Response(
+                JSON.stringify({ message: 'Subscribed successfully', response }),
+                { status: 200 }
+            );
+        }
     } catch (error) {
         return new Response(
             JSON.stringify({ error: 'Failed to subscribe' }),
