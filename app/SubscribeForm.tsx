@@ -21,7 +21,6 @@ const SubscribeForm = () => {
             const data = await res.json();
 
             if (res.status == 200 || res.status == 201) {
-                console.log("res: ", data)
                 setStatus('You have been successfully subscribed!');
                 setEmail('');
             } else {
