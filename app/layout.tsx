@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navigation from "@/components/Navigation";
+import AnimatedCursor from "react-animated-cursor"
 
 const sleepyHollow = localFont({
   src: "./fonts/BNSleepyHollow-Clean.otf",
@@ -23,6 +23,28 @@ export default function RootLayout({
       <body
         className={`${sleepyHollow.className} antialiased`}
       >
+        <AnimatedCursor
+          innerSize={10}
+          outerSize={30}
+          color='255, 255, 255'
+          outerAlpha={0.2}
+          innerScale={0.75}
+          outerScale={5}
+          clickables={[
+            'a',
+            'input[type="text"]',
+            'input[type="email"]',
+            'input[type="number"]',
+            'input[type="submit"]',
+            'input[type="button"]',
+            'input[type="image"]',
+            'label[for]',
+            'select',
+            'textarea',
+            'button',
+            '.link'
+          ]}
+      />
         {children}
       </body>
     </html>
