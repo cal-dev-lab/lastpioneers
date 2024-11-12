@@ -5,6 +5,7 @@ import LoadingScreen from "./LoadingScreen";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ListenSection from "@/components/ListenSection";
+import GallerySection from "@/components/GallerySection";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -23,6 +24,7 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <ListenSection />
+      <GallerySection />
       <div className="bg-white h-screen w-full"></div>
       <SubscribeForm />
     </>
