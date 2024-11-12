@@ -24,8 +24,8 @@ export default function Home() {
     <>
       <Navigation />
       <HeroSection />
-      <AboutSection />
       <ListenSection />
+      <AboutSection />
       {/* <GallerySection /> revisit */}
       <div className="bg-white h-screen w-full"></div>
       <SubscribeForm />
