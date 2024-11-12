@@ -12,13 +12,13 @@ export default function ListenSection() {
 
                 <section className="space-y-6 text-white">
                     <h2 className="text-3xl">OUT NOW</h2>
-                    <h2 className="text-8xl">DON'T TELL ME</h2>
+                    <h2 className="text-6xl lg:text-8xl lg:flex">DON'T TELL ME</h2>
 
-                    <div className="flex items-center gap-4">
-                        <Button className="flex items-center gap-2">
+                    <div className="sm:flex items-center gap-4 space-y-2 md:space-y-0">
+                        <Button className="w-full sm:w-auto flex items-center gap-2">
                             <FaApple /> <span>listen on apple music</span>
                         </Button>
-                        <Button className="flex items-center gap-2">
+                        <Button className="w-full sm:w-auto flex items-center gap-2">
                             <FaSpotify /> <span>listen on spotify</span>
                         </Button>
                     </div>

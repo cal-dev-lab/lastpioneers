@@ -67,7 +67,7 @@ export default function Navigation() {
                 )}
             </section>
 
-            <section className={`${showMenu && "hidden"} md:hidden fixed left-4 top-[50%] translate-y-[-50%] z-[999]`}>
+            <section className={`${showMenu && "hidden"} md:hidden fixed right-4 top-[50%] translate-y-[-50%] z-[999]`}>
                 <div className="gap-4 space-y-4 bg-white text-black p-2 rounded bg-opacity-50 backdrop-blur-lg">
                     <FaFacebook />
                     <FaInstagram />
