@@ -7,7 +7,6 @@ import { FaApple, FaSpotify } from "react-icons/fa6";
 export default function ListenSection() {
     return (
         <section className="w-full relative h-screen">
-
             <div className="grid grid-cols-1 md:grid-cols-2 items-center h-screen px-6 md:px-10 py-20">
                 <Image src={albumImg} alt="listen section"className="w-full object-cover" />
 
@@ -25,7 +24,7 @@ export default function ListenSection() {
                     </div>
                 </section>
             </div>
-            <Image src={backgroundImg} alt="listen section"className="blur-sm fixed top-0 left-0 -z-10 w-full object-cover" />
+            <Image src={backgroundImg} alt="listen section"className="blur-sm fixed top-0 left-0 -z-10 w-full h-screen object-cover" />
         </section>
     )
 }
