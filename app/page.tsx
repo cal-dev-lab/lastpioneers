@@ -1,9 +1,10 @@
 "use client"
 import { useEffect, useState } from "react";
 import SubscribeForm from "./SubscribeForm";
-import HeroSection from "@/components/HeroSection";
 import LoadingScreen from "./LoadingScreen";
 import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/HeroSection";
+import ListenSection from "@/components/ListenSection";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -11,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 2000);
   },[]);
 
   if (isLoading)
@@ -21,8 +22,9 @@ export default function Home() {
     <>
       <Navigation />
       <HeroSection />
+      <ListenSection />
+      <div className="bg-white h-screen w-full"></div>
       <SubscribeForm />
-      {/* <div className="bg-white h-screen w-full"></div> */}
     </>
   );
 }
