@@ -40,11 +40,11 @@ export default function Navigation() {
                 <nav className={`${isScrolled || showMenu ? "bg-opacity-50 backdrop-blur-lg" : "bg-transparent"}
                 flex justify-between fixed top-0 z-[999] h-24 w-full items-center px-4 md:px-10`}>
                     <p className="hidden md:flex items-center gap-4 text-white text-xl">
-                        <Link href="https://facebook.com/thelastpioneers" target="_blank"><FaFacebook /></Link>
-                        <Link href="https://instagram.com/thelastpioneers" target="_blank"><FaInstagram /></Link>
-                        <Link href="https://tiktok.com/@thelastpioneers" target="_blank"><FaTiktok /></Link>
-                        <Link href="https://youtube.com/channel/UCP-4VYYObKUuz8rrDsw9pCg" target="_blank"><FaYoutube /></Link>
-                        <Link href="https://twitter.com/thelastpioneers" target="_blank"><FaXTwitter /></Link>
+                        <Link onClick={() => setShowMenu(false)} href="https://facebook.com/thelastpioneers" target="_blank"><FaFacebook /></Link>
+                        <Link onClick={() => setShowMenu(false)} href="https://instagram.com/thelastpioneers" target="_blank"><FaInstagram /></Link>
+                        <Link onClick={() => setShowMenu(false)} href="https://tiktok.com/@thelastpioneers" target="_blank"><FaTiktok /></Link>
+                        <Link onClick={() => setShowMenu(false)} href="https://youtube.com/channel/UCP-4VYYObKUuz8rrDsw9pCg" target="_blank"><FaYoutube /></Link>
+                        <Link onClick={() => setShowMenu(false)} href="https://twitter.com/thelastpioneers" target="_blank"><FaXTwitter /></Link>
                     </p>
                     <div className="hidden md:flex gap-6 text-xl">
                         {mappedLinks}
@@ -68,11 +68,11 @@ export default function Navigation() {
             </section>
 
             <section className={`${showMenu && "hidden"} md:hidden fixed right-4 top-[50%] translate-y-[-50%] z-[999]`}>
-                <div className="gap-4 space-y-4 bg-white text-black p-2 rounded bg-opacity-50 backdrop-blur-lg">
-                    <Link href="https://facebook.com/thelastpioneers" target="_blank"><FaFacebook /></Link>
-                    <Link href="https://instagram.com/thelastpioneers" target="_blank"><FaInstagram /></Link>
-                    <Link href="https://tiktok.com/@thelastpioneers" target="_blank"><FaTiktok /></Link>
-                    <Link href="https://youtube.com/channel/UCP-4VYYObKUuz8rrDsw9pCg" target="_blank"><FaYoutube /></Link>
+                <div className=" bg-white text-black p-2 rounded bg-opacity-50 backdrop-blur-lg">
+                    <Link href="https://facebook.com/thelastpioneers" target="_blank"><FaFacebook className="mb-4" /></Link>
+                    <Link href="https://instagram.com/thelastpioneers" target="_blank"><FaInstagram className="mb-4" /></Link>
+                    <Link href="https://tiktok.com/@thelastpioneers" target="_blank"><FaTiktok className="mb-4" /></Link>
+                    <Link href="https://youtube.com/channel/UCP-4VYYObKUuz8rrDsw9pCg" target="_blank"><FaYoutube className="mb-4" /></Link>
                     <Link href="https://twitter.com/thelastpioneers" target="_blank"><FaXTwitter /></Link>
                 </div>
             </section>

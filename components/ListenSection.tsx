@@ -15,9 +15,9 @@ export default function ListenSection() {
                     <h2 className="text-3xl">OUT NOW</h2>
                     <h2 className="text-6xl lg:text-8xl lg:flex">DON'T TELL ME</h2>
 
-                    <div className="sm:flex items-center gap-4 space-y-2 md:space-y-0">
+                    <div className="sm:flex items-center gap-4 space-y-4 sm:space-y-0">
                         <Link href="https://music.apple.com/gb/album/dont-tell-me/1777484008?i=1777484009" target="_blank">
-                            <Button className="w-full sm:w-auto flex items-center gap-2">
+                            <Button className="w-full sm:w-auto flex items-center gap-2 mb-2 sm:mb-0">
                                 <FaApple /> <span>listen on apple music</span>
                             </Button>
                         </Link>
