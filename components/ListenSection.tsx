@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function ListenSection() {
     return (
-        <section className="w-full relative h-screen">
+        <section id="listen" className="w-full relative h-screen">
             <div className="grid grid-cols-1 md:grid-cols-2 items-center h-screen px-6 md:px-10 py-20">
                 <Image src="https://res.cloudinary.com/djzt8qfjt/image/upload/v1731467173/album-img_ywt7rq.png" alt="listen section"className="w-full object-cover" width={1920} height={1080} priority />
 
