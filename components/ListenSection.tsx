@@ -18,12 +18,12 @@ export default function ListenSection() {
                     <div className="sm:flex items-center gap-4 space-y-4 sm:space-y-0">
                         <Link href="https://music.apple.com/gb/album/dont-tell-me/1777484008?i=1777484009" target="_blank">
                             <Button className="w-full sm:w-auto flex items-center gap-2 mb-2 sm:mb-0">
-                                <FaApple /> <span>listen on apple music</span>
+                                <FaApple /> <p>Listen on Apple Music</p>
                             </Button>
                         </Link>
                         <Link href="https://open.spotify.com/track/6TunuvxaOLqSkAzHsZX4eZ?si=XpA8W8yWS66L4BwbwkmTkg" target="_blank">
                             <Button className="w-full sm:w-auto flex items-center gap-2">
-                                <FaSpotify /> <span>listen on spotify</span>
+                                <FaSpotify /> <p>Listen on Spotify</p>
                             </Button>
                         </Link>
                     </div>

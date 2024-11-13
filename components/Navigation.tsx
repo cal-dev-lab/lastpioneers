@@ -30,7 +30,7 @@ export default function Navigation() {
     }, []);
 
     const mappedLinks = links.map(link => (
-        <Link href={link.to} key={link.name} className="uppercase text-white">{link.name}</Link>
+        <Link href={link.to} key={link.name} className="uppercase text-white"><h3>{link.name}</h3></Link>
     ))
 
 
@@ -51,7 +51,7 @@ export default function Navigation() {
                     </div>
 
                     <div className="flex justify-between w-full md:hidden">
-                        <p className="uppercase text-white text-2xl">The Last Pioneers</p>
+                        <h1 className="uppercase text-white text-2xl">The Last Pioneers</h1>
                         <p className="text-white text-2xl" onClick={() => setShowMenu(!showMenu)}>
                             {showMenu ? <FaX /> : <FaBars /> }
                         </p>                        

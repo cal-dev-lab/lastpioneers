@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import AnimatedCursor from "react-animated-cursor"
+import AnimatedCursor from "react-animated-cursor";
+import { Toaster } from "@/components/ui/toaster";
 
 const sleepyHollow = localFont({
   src: "./fonts/BNSleepyHollow-Clean.otf",
+  variable: "--font-sleepy-hollow"
 });
 
+const radioGrotesk = localFont({
+  src: "./fonts/PPRadioGrotesk-Regular.otf",
+  variable: "--font-radio-grotesk"
+});
 
 export const metadata: Metadata = {
   title: "The Last Pioneers",
@@ -21,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sleepyHollow.className} antialiased`}
+        className={`${sleepyHollow.variable} ${radioGrotesk.variable} antialiased`}
       >
         <div className="hidden md:flex">
           <AnimatedCursor
@@ -48,6 +54,7 @@ export default function RootLayout({
           />
         </div>
         {children}
+        <Toaster />
       </body>
     </html>
   );

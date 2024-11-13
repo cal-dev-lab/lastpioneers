@@ -11,6 +11,7 @@
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-toast": "^1.2.2",
     "@types/mailchimp__mailchimp_marketing": "^3.0.20",
     "axios": "^1.7.7",
     "class-variance-authority": "^0.7.0",

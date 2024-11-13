@@ -1,12 +1,13 @@
 "use client"
 import { useEffect, useState } from "react";
-import SubscribeForm from "./SubscribeForm";
 import LoadingScreen from "./LoadingScreen";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import ListenSection from "@/components/ListenSection";
 import GallerySection from "@/components/GallerySection";
 import AboutSection from "@/components/AboutSection";
+import MailingListSection from "@/components/MailingListSection";
+import VideoSection from "@/components/VideoSection";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -26,9 +27,9 @@ export default function Home() {
       <HeroSection />
       <ListenSection />
       <AboutSection />
+      <VideoSection />
+      <MailingListSection />
       {/* <GallerySection /> revisit */}
-      <div className="bg-white h-screen w-full"></div>
-      <SubscribeForm />
     </>
   );
 }

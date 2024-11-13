@@ -1,10 +1,11 @@
 "use client"
 import { useState } from 'react';
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 
 const SubscribeForm = () => {
+    const { toast } = useToast();
     const [email, setEmail] = useState('');
-    const [status, setStatus] = useState<string | null>(null);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -21,13 +22,26 @@ const SubscribeForm = () => {
             const data = await res.json();
 
             if (res.status == 200 || res.status == 201) {
-                setStatus('You have been successfully subscribed!');
+                toast({
+                    title: "Success!",
+                    description: "You have been successfully subscribed!",
+                    className: "bg-black text-white"
+                })
                 setEmail('');
             } else {
-                setStatus(data.error || 'Something went wrong');
+                toast({
+                    title: "Uh-oh!",
+                    description: data.error,
+                    variant: "destructive",
+                    className: "bg-black text-white"
+                })
             }
         } catch (error) {
-            setStatus('An error occurred. Please try again.');
+            toast({
+                title: "Uh-oh!",
+                description: "An error occurred. Please try again.",
+                variant: "destructive"
+            })
         }
     };
 
@@ -43,7 +57,6 @@ const SubscribeForm = () => {
                 />
                 <Button disabled={!email} type="submit">Subscribe</Button>
             </form>
-            {status && <p>{status}</p>}
         </div>
     );
 };
