@@ -2,13 +2,17 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { Input } from "@/components/ui/input"
+
 
 const SubscribeForm = () => {
     const { toast } = useToast();
     const [email, setEmail] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        setLoading(true)
 
         try {
             const res = await fetch('/api/subscribe', {
@@ -28,6 +32,7 @@ const SubscribeForm = () => {
                     className: "bg-black text-white"
                 })
                 setEmail('');
+                setLoading(false);
             } else {
                 toast({
                     title: "Uh-oh!",
@@ -35,6 +40,7 @@ const SubscribeForm = () => {
                     variant: "destructive",
                     className: "bg-black text-white"
                 })
+                setLoading(false);
             }
         } catch (error) {
             toast({
@@ -42,20 +48,20 @@ const SubscribeForm = () => {
                 description: "An error occurred. Please try again.",
                 variant: "destructive"
             })
+            setLoading(false);
         }
     };
 
     return (
-        <div id="mailing-list">
-            <h2>Subscribe to our Newsletter</h2>
-            <form onSubmit={handleSubmit}>
-                <input
+        <div>
+            <form onSubmit={handleSubmit} className="flex items-center gap-4">
+                <Input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter your email"
+                    placeholder="email@example.com"
                 />
-                <Button disabled={!email} type="submit">Subscribe</Button>
+                <Button disabled={!email || loading} type="submit">Submit</Button>
             </form>
         </div>
     );

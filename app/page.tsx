@@ -8,6 +8,7 @@ import GallerySection from "@/components/GallerySection";
 import AboutSection from "@/components/AboutSection";
 import MailingListSection from "@/components/MailingListSection";
 import VideoSection from "@/components/VideoSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -28,8 +29,9 @@ export default function Home() {
       <ListenSection />
       <AboutSection />
       <VideoSection />
+      <GallerySection />
       <MailingListSection />
-      {/* <GallerySection /> revisit */}
+      <Footer />
     </>
   );
 }
