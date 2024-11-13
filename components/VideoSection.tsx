@@ -1,7 +1,25 @@
+import YouTube from "react-youtube";
+import { ScrollBar, ScrollArea } from "@/components/ui/scroll-area"
+
 export default function VideoSection() {
+    const opts = {
+        height: "250",
+        width: "480",
+        playerVars: {
+            autoplay: 1,
+        },
+    };
     return (
-        <section id="video">
-            <p>Video Section</p>
+        <section id="video" className="px-6 md:px-10 py-20 bg-black w-full">
+            <h1 className="text-white text-4xl md:text-7xl">CHECK OUT OUR VIDEOS</h1>
+            <ScrollArea className="w-full rounded-md border p-4 flex gap-4">
+                <div className="flex gap-4">
+                    <YouTube videoId="ZRbxwYdYgvQ" opts={opts} />
+                    <YouTube videoId="wJ9cQKDjKFo" opts={opts} />
+                    <YouTube videoId="b76HUq6FS38" opts={opts} />
+                </div>
+                <ScrollBar orientation="horizontal" />
+            </ScrollArea>
         </section>
     )
 }
