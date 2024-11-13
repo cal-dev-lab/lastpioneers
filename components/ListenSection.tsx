@@ -3,6 +3,7 @@ import backgroundImg from "@/public/images/listen-section.png";
 import albumImg from "@/public/images/album-img.png";
 import { Button } from "./ui/button";
 import { FaApple, FaSpotify } from "react-icons/fa6";
+import Link from "next/link";
 
 export default function ListenSection() {
     return (
@@ -15,12 +16,16 @@ export default function ListenSection() {
                     <h2 className="text-6xl lg:text-8xl lg:flex">DON'T TELL ME</h2>
 
                     <div className="sm:flex items-center gap-4 space-y-2 md:space-y-0">
-                        <Button className="w-full sm:w-auto flex items-center gap-2">
-                            <FaApple /> <span>listen on apple music</span>
-                        </Button>
-                        <Button className="w-full sm:w-auto flex items-center gap-2">
-                            <FaSpotify /> <span>listen on spotify</span>
-                        </Button>
+                        <Link href="https://music.apple.com/gb/album/dont-tell-me/1777484008?i=1777484009" target="_blank">
+                            <Button className="w-full sm:w-auto flex items-center gap-2">
+                                <FaApple /> <span>listen on apple music</span>
+                            </Button>
+                        </Link>
+                        <Link href="https://open.spotify.com/track/6TunuvxaOLqSkAzHsZX4eZ?si=XpA8W8yWS66L4BwbwkmTkg" target="_blank">
+                            <Button className="w-full sm:w-auto flex items-center gap-2">
+                                <FaSpotify /> <span>listen on spotify</span>
+                            </Button>
+                        </Link>
                     </div>
                 </section>
             </div>
