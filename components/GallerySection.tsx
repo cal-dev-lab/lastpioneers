@@ -9,12 +9,12 @@ import Image from "next/image";
 
 export default function GallerySection() {
     const photos = [
-        { id: 1, src: "https://res.cloudinary.com/djzt8qfjt/image/upload/q_auto,f_auto/v1731516590/DSC_7808_vyzn6m.jpg"},
-        { id: 2, src: "https://res.cloudinary.com/djzt8qfjt/image/upload/q_auto,f_auto/v1731516371/DSC_8055_wngyuv.jpg" },
-        { id: 3, src: "https://res.cloudinary.com/djzt8qfjt/image/upload/q_auto,f_auto/v1731465600/galleryTwo_qxqeeg.png" },
-        { id: 4, src: "https://res.cloudinary.com/djzt8qfjt/image/upload/q_auto,f_auto/v1731516476/DSC_8132_isrz8b.jpg" },
-        { id: 5, src: "https://res.cloudinary.com/djzt8qfjt/image/upload/q_auto,f_auto/v1731465602/galleryThree_k47bdw.png" },
-        { id: 6, src: "https://res.cloudinary.com/djzt8qfjt/image/upload/q_auto,f_auto/v1731516471/DSC_7996_voenyb.jpg" },
+        { id: 1, src: "https://res.cloudinary.com/djzt8qfjt/image/upload/v1731534715/DSC_7808_vyzn6m_nrxczk.avif"},
+        { id: 2, src: "https://res.cloudinary.com/djzt8qfjt/image/upload/v1731534716/DSC_8055_wngyuv_wuuizf.avif" },
+        { id: 3, src: "https://res.cloudinary.com/djzt8qfjt/image/upload/v1731534717/galleryTwo_qxqeeg_i6h3cn.avif" },
+        { id: 4, src: "https://res.cloudinary.com/djzt8qfjt/image/upload/v1731534718/DSC_8132_isrz8b_el5oiu.avif" },
+        { id: 5, src: "https://res.cloudinary.com/djzt8qfjt/image/upload/v1731534720/galleryThree_k47bdw_ys5fnd.avif" },
+        { id: 6, src: "https://res.cloudinary.com/djzt8qfjt/image/upload/v1731534717/DSC_7996_voenyb_f4bcx9.avif" },
     ]
 
     return (
