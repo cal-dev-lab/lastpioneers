@@ -14,6 +14,7 @@ export default function VideoSection() {
             <h1 className="text-white text-4xl md:text-7xl">VIDEOS</h1>
             <ScrollArea className="w-full rounded-md border p-4 flex gap-4">
                 <div className="flex gap-4 justify-between w-full">
+                    <YouTube videoId="B9fwNktiM4I" opts={opts} />
                     <YouTube videoId="ZRbxwYdYgvQ" opts={opts} />
                     <YouTube videoId="wJ9cQKDjKFo" opts={opts} />
                     <YouTube videoId="b76HUq6FS38" opts={opts} />
