@@ -27,7 +27,7 @@ export default function ListenSection() {
                     </div>
                 </section>
             </div>
-            <Image src="https://res.cloudinary.com/djzt8qfjt/image/upload/q_auto,f_auto/v1731467375/listen-section_cyxll3.jpg" width={1280} height={720} alt="listen section"className="blur-sm fixed top-0 left-0 -z-10 w-full h-screen object-cover" />
+            <Image src="https://res.cloudinary.com/djzt8qfjt/image/upload/q_auto,f_auto/v1731467375/listen-section_cyxll3.jpg" priority width={1280} height={720} alt="listen section"className="blur-sm fixed top-0 left-0 -z-10 w-full h-screen object-cover" />
         </section>
     )
 }

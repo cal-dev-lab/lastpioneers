@@ -12,7 +12,7 @@ export default function Navigation() {
         { name: "Video", to: "#video" },
         { name: "Gallery", to: "#gallery" },
         { name: "Mailing List", to: "#mailing-list" },
-        { name: "Contact", to: "#contact" }
+        // { name: "Contact", to: "#contact" }
     ];
 
     const handleScroll = () => {
@@ -41,11 +41,11 @@ export default function Navigation() {
                 <nav className={`${isScrolled || showMenu ? "bg-opacity-50 backdrop-blur-lg" : "bg-transparent"}
                 flex justify-between fixed top-0 z-[999] h-24 w-full items-center px-4 md:px-10`}>
                     <p className="hidden md:flex items-center gap-4 text-white text-xl">
-                        <Link onClick={() => setShowMenu(false)} href="https://facebook.com/thelastpioneers" target="_blank"><FaFacebook /></Link>
-                        <Link onClick={() => setShowMenu(false)} href="https://instagram.com/thelastpioneers" target="_blank"><FaInstagram /></Link>
-                        <Link onClick={() => setShowMenu(false)} href="https://tiktok.com/@thelastpioneers" target="_blank"><FaTiktok /></Link>
-                        <Link onClick={() => setShowMenu(false)} href="https://youtube.com/channel/UCP-4VYYObKUuz8rrDsw9pCg" target="_blank"><FaYoutube /></Link>
-                        <Link onClick={() => setShowMenu(false)} href="https://twitter.com/thelastpioneers" target="_blank"><FaXTwitter /></Link>
+                        <Link href="https://facebook.com/thelastpioneers" target="_blank"><FaFacebook /></Link>
+                        <Link href="https://instagram.com/thelastpioneers" target="_blank"><FaInstagram /></Link>
+                        <Link href="https://tiktok.com/@thelastpioneers" target="_blank"><FaTiktok /></Link>
+                        <Link href="https://youtube.com/channel/UCP-4VYYObKUuz8rrDsw9pCg" target="_blank"><FaYoutube /></Link>
+                        <Link href="https://twitter.com/thelastpioneers" target="_blank"><FaXTwitter /></Link>
                     </p>
                     <div className="hidden md:flex gap-6 text-xl">
                         {mappedLinks}

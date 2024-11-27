@@ -28,7 +28,7 @@ export default function GallerySection() {
                     {
                         photos.map((photo) => (
                             <CarouselItem key={photo.id}>
-                                <Image src={photo.src} width={1280} height={720}  alt="Pictures of the band, press shots and live performances." />
+                                <Image priority src={photo.src} width={1280} height={720}  alt="Pictures of the band, press shots and live performances." />
                             </CarouselItem>
                         ))
                     }
