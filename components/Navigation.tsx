@@ -30,7 +30,7 @@ export default function Navigation() {
     }, []);
 
     const mappedLinks = links.map(link => (
-        <Link href={link.to} key={link.name} className="uppercase text-white"><h3>{link.name}</h3></Link>
+        <Link onClick={() => setShowMenu(false)} href={link.to} key={link.name} className="uppercase text-white"><h3>{link.name}</h3></Link>
     ))
 
 
@@ -54,7 +54,7 @@ export default function Navigation() {
                         <h1 className="uppercase text-white text-2xl">The Last Pioneers</h1>
                         <p className="text-white text-2xl" onClick={() => setShowMenu(!showMenu)}>
                             {showMenu ? <FaX /> : <FaBars /> }
-                        </p>                        
+                        </p>
                     </div>
                 </nav>
             </section>
