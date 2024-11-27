@@ -12,6 +12,7 @@ export default function Navigation() {
         { name: "Video", to: "#video" },
         { name: "Gallery", to: "#gallery" },
         { name: "Mailing List", to: "#mailing-list" },
+        { name: "Contact", to: "#contact" }
     ];
 
     const handleScroll = () => {
