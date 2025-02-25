@@ -6,17 +6,18 @@ import { Toaster } from "@/components/ui/toaster";
 
 const sleepyHollow = localFont({
   src: "./fonts/BNSleepyHollow-Clean.otf",
-  variable: "--font-sleepy-hollow"
+  variable: "--font-sleepy-hollow",
 });
 
 const radioGrotesk = localFont({
   src: "./fonts/PPRadioGrotesk-Regular.otf",
-  variable: "--font-radio-grotesk"
+  variable: "--font-radio-grotesk",
 });
 
 export const metadata: Metadata = {
   title: "The Last Pioneers",
-  description: "Explore the unique sound of The Last Pioneers, an emerging band blending indie rock, folk, and modern influences. Discover their music, latest releases, and live performances that capture the spirit of innovation and artistry.",
+  description:
+    "Explore the unique sound of The Last Pioneers, an emerging band blending indie rock, folk, and modern influences. Discover their music, latest releases, and live performances that capture the spirit of innovation and artistry.",
 };
 
 export default function RootLayout({
@@ -33,28 +34,28 @@ export default function RootLayout({
           <AnimatedCursor
             innerSize={10}
             outerSize={30}
-            color='255, 255, 255'
+            color="255, 255, 255"
             outerAlpha={0.2}
             innerScale={0.75}
             outerScale={5}
             clickables={[
-              'a',
+              "a",
               'input[type="text"]',
               'input[type="email"]',
               'input[type="number"]',
               'input[type="submit"]',
               'input[type="button"]',
               'input[type="image"]',
-              'label[for]',
-              'select',
-              'textarea',
-              'button',
-              '.link'
+              "label[for]",
+              "select",
+              "textarea",
+              "button",
+              ".link",
             ]}
           />
         </div>
         {children}
-        <Toaster />
+        <Toaster position="bottom-right" />
       </body>
     </html>
   );
