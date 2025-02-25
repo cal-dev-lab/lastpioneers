@@ -18,8 +18,8 @@ export default function HeroSection() {
       <div className={`${imageLoaded ? "hidden" : "inline"}`}>
         <Blurhash
           hash="L79P_^WX00WWenNGS4xa00oz~WM{"
-          width={200}
-          height={200}
+          width={1920}
+          height={1080}
           resolutionX={32}
           resolutionY={32}
           punch={1}
