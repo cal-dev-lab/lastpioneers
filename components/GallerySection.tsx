@@ -4,7 +4,6 @@ import {
   CarouselItem,
 } from "@/components/ui/carousel";
 import Image from "next/image";
-import FadeInUpWrapper from "./FadeInUpWrapper";
 
 export default function GallerySection() {
   const photos = [
@@ -36,27 +35,25 @@ export default function GallerySection() {
 
   return (
     <section id="gallery" className="bg-white py-40">
-      <FadeInUpWrapper>
-        <section className="mx-auto container px-4">
-          <Carousel className="container mx-auto relative w-full">
-            <CarouselContent>
-              {photos.map((photo) => (
-                <CarouselItem key={photo.id}>
-                  <Image
-                    priority
-                    src={photo.src}
-                    width={3840}
-                    height={2160}
-                    layout="responsive"
-                    alt="Pictures of the band, press shots and live performances."
-                  />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-          <p className="text-right pt-10">Swipe for more images</p>
-        </section>
-      </FadeInUpWrapper>
+      <section className="mx-auto container px-4">
+        <Carousel className="container mx-auto relative w-full">
+          <CarouselContent>
+            {photos.map((photo) => (
+              <CarouselItem key={photo.id}>
+                <Image
+                  priority
+                  src={photo.src}
+                  width={3840}
+                  height={2160}
+                  layout="responsive"
+                  alt="Pictures of the band, press shots and live performances."
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+        <p className="text-right pt-10">Swipe for more images</p>
+      </section>
     </section>
   );
 }
