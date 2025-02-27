@@ -45,7 +45,6 @@ export default function GallerySection() {
                   src={photo.src}
                   width={3840}
                   height={2160}
-                  layout="responsive"
                   alt="Pictures of the band, press shots and live performances."
                 />
               </CarouselItem>

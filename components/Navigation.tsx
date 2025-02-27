@@ -11,8 +11,10 @@ import {
   FaYoutube,
 } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import { useCart } from "@/context/cart-context";
 
 export default function Navigation() {
+  const { cart } = useCart();
   const [isScrolled, setIsScrolled] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
 
@@ -72,6 +74,7 @@ export default function Navigation() {
               <Link href="/tour">
                 <p className="text-white">TOUR</p>
               </Link>
+              <Link href="/cart">Cart ({cart.length})</Link>
             </div>
             {/* Logo */}
             <Link href="/">
