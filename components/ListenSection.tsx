@@ -1,33 +1,64 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { FaApple, FaSpotify } from "react-icons/fa6";
+import { FaSpotify } from "react-icons/fa6";
+import { SiApplemusic } from "react-icons/si";
 import Link from "next/link";
+import FadeInUpWrapper from "./FadeInUpWrapper";
 
 export default function ListenSection() {
-    return (
-        <section id="listen" className="w-full relative h-screen">
-            <div className="grid grid-cols-1 md:grid-cols-2 items-center h-screen px-6 md:px-10 py-20">
-                <Image src="https://res.cloudinary.com/djzt8qfjt/image/upload/v1731534716/album-img_ywt7rq_cs96oa.avif" alt="Album artwork"className="w-full object-cover" width={1280} height={720} priority />
-
-                <section className="space-y-6 text-white">
-                    <h2 className="text-3xl">OUT NOW</h2>
-                    <h2 className="text-6xl lg:text-8xl lg:flex">DON'T TELL ME</h2>
-
-                    <div className="sm:flex items-center gap-4 space-y-4 sm:space-y-0">
-                        <Link href="https://music.apple.com/gb/album/dont-tell-me/1777484008?i=1777484009" target="_blank">
-                            <Button className="w-full sm:w-auto flex items-center gap-2 mb-2 sm:mb-0">
-                                <FaApple /> <p>Listen on Apple Music</p>
-                            </Button>
-                        </Link>
-                        <Link href="https://open.spotify.com/track/6TunuvxaOLqSkAzHsZX4eZ?si=XpA8W8yWS66L4BwbwkmTkg" target="_blank">
-                            <Button className="w-full sm:w-auto flex items-center gap-2">
-                                <FaSpotify /> <p>Listen on Spotify</p>
-                            </Button>
-                        </Link>
-                    </div>
-                </section>
+  return (
+    <section className="bg-black py-40">
+      <FadeInUpWrapper>
+        <section className="mx-auto container px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-0">
+            {/* Text */}
+            <div className="flex flex-col justify-between">
+              <div className="md:space-y-20">
+                <p className="text-white text-xl">OUR LATEST SINGLE</p>
+                <p className="text-white text-5xl md:text-7xl">
+                  "COMING FOR YOU"
+                </p>
+              </div>
+              <div className="space-y-4 mt-8 md:mt-0">
+                <p className="text-white underline text-lg hidden md:block">
+                  LISTEN NOW
+                </p>
+                <div className="flex items-center gap-4">
+                  <Link
+                    href="https://music.apple.com/gb/album/coming-for-you/1798680069?i=1798680070"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="text-white">
+                      <SiApplemusic />
+                      <p>Apple Music</p>
+                    </Button>
+                  </Link>
+                  <Link
+                    href="https://open.spotify.com/album/0OndgAsI3wozOSw7vPWI4h?si=nArsdOC9QJST2P3x_p_eZw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="text-white">
+                      <FaSpotify />
+                      <p>Spotify</p>
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </div>
-            <Image src="https://res.cloudinary.com/djzt8qfjt/image/upload/q_auto,f_auto/v1731467375/listen-section_cyxll3.jpg" priority width={1280} height={720} alt="listen section"className="blur-sm fixed top-0 left-0 -z-10 w-full h-screen object-cover" />
+            {/* Image */}
+            <div className="flex items-center justify-end">
+              <Image
+                alt="Coming For You album cover"
+                width={600}
+                height={600}
+                src="https://res.cloudinary.com/djzt8qfjt/image/upload/v1740616529/COMING_FOR_YOU_ALBUM_ARTWORK_FOR_WEBSITE_v2_efatrr.avif"
+              />
+            </div>
+          </div>
         </section>
-    )
+      </FadeInUpWrapper>
+    </section>
+  );
 }

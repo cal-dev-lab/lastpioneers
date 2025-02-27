@@ -64,7 +64,7 @@ const SubscribeForm = () => {
           placeholder="email@example.com"
         />
         <Button disabled={!email || loading} type="submit">
-          Submit
+          <p>SUBMIT</p>
         </Button>
       </form>
     </div>

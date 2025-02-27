@@ -9,9 +9,9 @@ const sleepyHollow = localFont({
   variable: "--font-sleepy-hollow",
 });
 
-const radioGrotesk = localFont({
-  src: "./fonts/PPRadioGrotesk-Regular.otf",
-  variable: "--font-radio-grotesk",
+const neueMontreal = localFont({
+  src: "./fonts/neue-montreal.otf",
+  variable: "--font-neue-montreal",
 });
 
 export const metadata: Metadata = {
@@ -28,13 +28,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sleepyHollow.variable} ${radioGrotesk.variable} antialiased`}
+        className={`${sleepyHollow.variable} ${neueMontreal.variable} antialiased`}
       >
         <div className="hidden md:flex">
           <AnimatedCursor
             innerSize={10}
             outerSize={30}
-            color="255, 255, 255"
+            color="150, 150, 150"
             outerAlpha={0.2}
             innerScale={0.75}
             outerScale={5}

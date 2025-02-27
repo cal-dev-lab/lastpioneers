@@ -1,6 +1,7 @@
 import NextImage from "next/image";
 import { useEffect, useState } from "react";
 import { Blurhash } from "react-blurhash";
+import { PiMouseScrollThin } from "react-icons/pi";
 
 export default function HeroSection() {
   const IMAGE_SOURCE =
@@ -33,7 +34,7 @@ export default function HeroSection() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <section id="home" className="relative">
+    <section id="home" className="-mt-20 md:-mt-32 relative">
       <div className={`${imageLoaded ? "hidden" : "inline"}`}>
         <Blurhash
           hash="L79P_^WX00WWenNGS4xa00oz~WM{"
@@ -46,19 +47,15 @@ export default function HeroSection() {
       </div>
       <NextImage
         src={IMAGE_SOURCE}
-        alt="hero"
+        alt="Press shot of The Last Pioneers"
         className={`${!imageLoaded ? "hidden" : "inline"} w-full h-screen object-cover`}
         priority
-        width={1920}
-        height={1080}
+        width={dimensions.width}
+        height={dimensions.height}
       />
-      <div className="hidden md:block space-y-4 absolute left-6 bottom-10 md:bottom-10 md:left-10">
-        <h1 className="text-white text-4xl md:text-6xl lg:text-8xl">
-          THE LAST
-        </h1>
-        <h1 className="text-white text-4xl md:text-6xl lg:text-8xl">
-          PIONEERS
-        </h1>
+      <div className="text-white text-3xl flex flex-col gap-2 items-center absolute bottom-10 md:bottom-20 left-1/2 transform -translate-x-1/2">
+        <PiMouseScrollThin className="animate-bounce" />
+        <p className="text-lg">SCROLL</p>
       </div>
     </section>
   );
