@@ -22,6 +22,7 @@ export default function VideoSection() {
           </div>
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
+        <p className="text-right pt-10">Swipe for more videos</p>
       </div>
     </section>
   );
