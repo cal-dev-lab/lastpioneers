@@ -93,11 +93,21 @@ export function CartProvider({ children }: { children: ReactNode }) {
     });
   };
 
+  // const updateQuantity = (variantId: string, quantity: number) => {
+  //   setCart((prevCart) =>
+  //     prevCart.map((item) =>
+  //       item.variantId === variantId
+  //         ? { ...item, quantity: Math.min(quantity, item.stock) } // Restrict max quantity to stock
+  //         : item,
+  //     ),
+  //   );
+  // };
+
   const updateQuantity = (variantId: string, quantity: number) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
         item.variantId === variantId
-          ? { ...item, quantity: Math.min(quantity, item.stock) } // Restrict max quantity to stock
+          ? { ...item, quantity: Math.min(quantity, item.stock || 0) } // Ensure stock is a number
           : item,
       ),
     );

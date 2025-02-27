@@ -94,7 +94,7 @@ export default function Home() {
                       quantity: 1,
                       image: node.images.edges[0].node.src,
                       price: selectedVariant.priceV2?.amount,
-                      stock: selectedVariant.availableForSale,
+                      stock: selectedVariant.quantityAvailable,
                     });
                   }}
                   disabled={!selectedVariants[node.id]} // Disable if no size is selected

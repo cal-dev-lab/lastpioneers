@@ -37,30 +37,28 @@ export default function CartPage() {
                 <h2 className="text-lg font-semibold">
                   {item.title} ({item.variantTitle}){" "}
                 </h2>
-                {/* <button
-                  onClick={() => {
-                    console.log("stock: ", item.stock);
-                    console.log("quantity: ", item.quantity);
-                  }}
-                >
-                  CLICK ME
-                </button> */}
                 <p className="text-gray-600">{item.price}</p>
                 <div className="flex items-center mt-2">
                   <button
-                    onClick={() =>
-                      updateQuantity(item.variantId, item.quantity - 1)
-                    }
+                    onClick={() => {
+                      if (item.quantity > 1)
+                        updateQuantity(item.variantId, item.quantity - 1);
+                    }}
                     className="px-2 bg-gray-300 rounded"
+                    disabled={item.quantity === 0}
                   >
                     -
                   </button>
                   <span className="px-4">{item.quantity}</span>
                   <button
-                    onClick={() =>
-                      updateQuantity(item.variantId, item.quantity + 1)
-                    }
+                    onClick={() => {
+                      console.log(
+                        `Increasing ${item.variantTitle} from ${item.quantity} to ${item.quantity + 1}`,
+                      );
+                      updateQuantity(item.variantId, item.quantity + 1);
+                    }}
                     className="px-2 bg-gray-300 rounded"
+                    disabled={item.quantity >= item.stock} // ✅ Disable if at max stock
                   >
                     +
                   </button>

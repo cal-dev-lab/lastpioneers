@@ -74,7 +74,9 @@ export default function Navigation() {
               <Link href="/tour">
                 <p className="text-white">TOUR</p>
               </Link>
-              <Link href="/cart">Cart ({cart.length})</Link>
+              {cart.length > 0 && (
+                <Link href="/cart">Cart ({cart.length})</Link>
+              )}
             </div>
             {/* Logo */}
             <Link href="/">
