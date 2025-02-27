@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   title: "The Last Pioneers",
   description:
     "Explore the unique sound of The Last Pioneers, an emerging band blending indie rock, folk, and modern influences. Discover their music, latest releases, and live performances that capture the spirit of innovation and artistry.",
+  icons: null,
 };
 
 export default function RootLayout({
