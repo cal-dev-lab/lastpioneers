@@ -69,39 +69,28 @@ export function CartProvider({ children }: { children: ReactNode }) {
   //   });
   // };
   //
-  const addToCart = (item: CartItem) => {
-    if (item.stock <= 0) {
-      console.error("Cannot add to cart: Item is out of stock");
-      return;
-    }
+  const addToCart = async (item: CartItem) => {
+    return new Promise<void>((resolve) => {
+      setCart((prevCart) => {
+        const existingItem = prevCart.find(
+          (i) => i.variantId === item.variantId,
+        );
 
-    setCart((prevCart) => {
-      const existingItem = prevCart.find((i) => i.variantId === item.variantId);
-
-      if (existingItem) {
-        if (existingItem.quantity < existingItem.stock) {
+        if (existingItem) {
           return prevCart.map((i) =>
             i.variantId === item.variantId
-              ? { ...i, quantity: Math.min(i.quantity + 1, i.stock) }
+              ? { ...i, quantity: i.quantity + 1 }
               : i,
           );
+        } else {
+          return [...prevCart, { ...item, quantity: 1 }];
         }
-        return prevCart; // Prevent adding more than available stock
-      }
+      });
 
-      return [...prevCart, { ...item, quantity: 1 }];
+      resolve(); // Ensures the function resolves after updating state
     });
+    return { cart, addToCart };
   };
-
-  // const updateQuantity = (variantId: string, quantity: number) => {
-  //   setCart((prevCart) =>
-  //     prevCart.map((item) =>
-  //       item.variantId === variantId
-  //         ? { ...item, quantity: Math.min(quantity, item.stock) } // Restrict max quantity to stock
-  //         : item,
-  //     ),
-  //   );
-  // };
 
   const updateQuantity = (variantId: string, quantity: number) => {
     setCart((prevCart) =>

@@ -68,14 +68,16 @@ export default function Navigation() {
               <Link href="/">
                 <p className="text-white">HOME</p>
               </Link>
-              <Link href="/store">
-                <p className="text-white">STORE</p>
-              </Link>
               <Link href="/tour">
                 <p className="text-white">TOUR</p>
               </Link>
+              <Link href="/store">
+                <p className="text-white">STORE</p>
+              </Link>
               {cart.length > 0 && (
-                <Link href="/cart">Cart ({cart.length})</Link>
+                <Link href="/cart">
+                  <p className="text-white">CART ({cart.length})</p>
+                </Link>
               )}
             </div>
             {/* Logo */}
@@ -134,14 +136,23 @@ export default function Navigation() {
 
         <section className="flex md:hidden items-center justify-between w-full h-full mx-auto container px-4 -mt-1">
           <Link href="/">
-            <h1 className="text-white text-2xl mt-4">THE LAST PIONEERS</h1>
+            <h1 className="text-white text-2xl mt-[0.725rem]">
+              THE LAST PIONEERS
+            </h1>
           </Link>
-          <p
-            onClick={() => setShowMenu(!showMenu)}
-            className="text-white text-4xl"
-          >
-            {showMenu ? <IoCloseSharp /> : <HiBars2 />}
-          </p>
+          <div className="flex items-center gap-2">
+            {cart.length > 0 && (
+              <Link href="/cart">
+                <p className="text-white">CART ({cart.length})</p>
+              </Link>
+            )}
+            <p
+              onClick={() => setShowMenu(!showMenu)}
+              className="text-white text-4xl"
+            >
+              {showMenu ? <IoCloseSharp /> : <HiBars2 />}
+            </p>
+          </div>
         </section>
       </section>
 
@@ -151,12 +162,17 @@ export default function Navigation() {
             <Link href="/">
               <p className="text-3xl">HOME</p>
             </Link>
-            <Link href="/store">
-              <p className="text-3xl">STORE</p>
-            </Link>
             <Link href="/tour">
               <p className="text-3xl">TOUR</p>
             </Link>
+            <Link href="/store">
+              <p className="text-3xl">STORE</p>
+            </Link>
+            {cart.length > 0 && (
+              <Link href="/cart">
+                <p className="text-3xl">CART ({cart.length})</p>
+              </Link>
+            )}
             <div className="flex items-center gap-4 text-3xl mt-20">
               <Link
                 href="mailto:contact@thelastpioneers.co.uk?subject=Website Enquiry"
