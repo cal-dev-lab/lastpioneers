@@ -113,11 +113,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const checkout = async () => {
     if (cart.length === 0) {
       console.error("Checkout failed: Cart is empty.");
+      alert("Your cart is empty.");
       return;
     }
 
-    // 🔹 Fetch the latest stock levels before checkout
     try {
+      // 🔹 Fetch the latest stock levels before checkout
       const stockCheckQuery = gql`
         query GetVariantStock($ids: [ID!]!) {
           nodes(ids: $ids) {
@@ -132,7 +133,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       const { data } = await client.query({
         query: stockCheckQuery,
         variables: { ids: cart.map((item) => item.variantId) },
-        fetchPolicy: "no-cache", // Ensures fresh stock data
+        fetchPolicy: "no-cache",
       });
 
       const updatedStock = new Map(
@@ -148,7 +149,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
       );
 
       if (outOfStockItems.length > 0) {
-        console.error("Some items are sold out:", outOfStockItems);
         alert("Some items in your cart are sold out. Please update your cart.");
         return;
       }
@@ -179,23 +179,30 @@ export function CartProvider({ children }: { children: ReactNode }) {
         },
       });
 
+      // 🔹 Handle Errors
       if (checkoutData.cartCreate.userErrors.length > 0) {
         console.error(
           "Shopify Checkout Errors:",
           checkoutData.cartCreate.userErrors,
         );
+        alert(
+          `Checkout failed: ${checkoutData.cartCreate.userErrors[0].message}`,
+        );
         return;
       }
 
+      // 🔹 Redirect to Checkout
       const checkoutUrl = checkoutData.cartCreate.cart?.checkoutUrl;
       if (!checkoutUrl) {
         console.error("Checkout failed: No checkout URL returned.");
+        alert("An error occurred. Please try again.");
         return;
       }
 
       window.location.href = checkoutUrl; // ✅ Redirect to Shopify checkout
     } catch (error) {
       console.error("Checkout error:", error);
+      alert("An error occurred while processing checkout.");
     }
   };
 
