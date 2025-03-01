@@ -38,7 +38,7 @@ export default function CartPage() {
                         {item.title} ({item.variantTitle}){" "}
                       </p>
                       <p className="text-gray-400">
-                        £{Number(item.price).toString() + "0"}
+                        £{Number(item.price).toFixed(2)}
                       </p>
                       <div className="flex items-center mt-2">
                         <Button
