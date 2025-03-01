@@ -45,16 +45,13 @@ export default function Home() {
           <ul className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-4">
             {products?.length > 0 ? (
               products.map(({ node }: any) => {
-                const preorderMetafield = node?.metafields?.find(
-                  (mf: Metafield) => mf?.key === "preorder",
-                );
                 const defaultVariantId = node.variants.edges[0]?.node.id || "";
-
                 const selectedVariantId =
                   selectedVariants[node.id] || defaultVariantId;
                 const selectedVariant = node.variants.edges.find(
                   ({ node }: any) => node.id === selectedVariantId,
                 )?.node;
+                const price = selectedVariant?.priceV2.amount;
                 return (
                   <li
                     key={node.id}
@@ -74,10 +71,14 @@ export default function Home() {
                       />
                     )}
 
-                    <p className="mt-4 text-xl font-semibold uppercase">
-                      {node.title}
-                    </p>
-                    {/* <p className="text-gray-600">{node.description}</p> */}
+                    <div>
+                      <p className="mt-4 text-xl font-semibold uppercase">
+                        {node.title}
+                      </p>
+                      <p className="text-gray-600">
+                        £{Number(price).toFixed(2)}
+                      </p>
+                    </div>
 
                     <div>
                       {/* Size Selection */}
