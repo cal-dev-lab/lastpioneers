@@ -134,7 +134,7 @@ export default function Navigation() {
           </div>
         </section>
 
-        <section className="flex md:hidden items-center justify-between w-full h-full mx-auto container px-4 -mt-1">
+        <section className="sticky top-0 flex md:hidden items-center justify-between w-full h-full mx-auto container px-4 -mt-1">
           <Link href="/">
             <h1 className="text-white text-2xl mt-[0.725rem]">
               THE LAST PIONEERS
