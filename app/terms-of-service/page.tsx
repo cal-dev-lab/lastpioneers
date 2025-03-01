@@ -17,47 +17,64 @@ export default function TermsOfService() {
             not agree with these Terms, please do not use our Site.
           </p>
           <p className="text-xl uppercase">1. General Use</p>
-          The Last Pioneers provides an online platform for users to browse and
-          purchase products. Your use of the Site is subject to these Terms, as
-          well as any applicable laws and regulations.
+          <p>
+            The Last Pioneers provides an online platform for users to browse
+            and purchase products. Your use of the Site is subject to these
+            Terms, as well as any applicable laws and regulations.
+          </p>
           <p className="text-xl uppercase">2. Transactions and Payments</p>
-          All transactions, payments, and order processing on The Last Pioneers
-          are managed by Shopify. By making a purchase on our Site, you agree to
-          Shopify’s Terms of Service and Payment Policies. The Last Pioneers
-          does not process, store, or have access to your payment information.
-          Shopify is responsible for handling payment security, refunds,
-          chargebacks, and any financial disputes.
+          <p>
+            All transactions, payments, and order processing on The Last
+            Pioneers are managed by Shopify. By making a purchase on our Site,
+            you agree to Shopify’s Terms of Service and Payment Policies. The
+            Last Pioneers does not process, store, or have access to your
+            payment information. Shopify is responsible for handling payment
+            security, refunds, chargebacks, and any financial disputes.
+          </p>
           <p className="text-xl uppercase">3. Shipping and Fulfillment</p>
-          While we strive to ensure timely delivery, shipping times and
-          fulfillment are subject to third-party providers, including Shopify
-          and partnered carriers. Any delays or issues related to shipping
-          should be addressed with the respective carrier.
+          <p>
+            While we strive to ensure timely delivery, shipping times and
+            fulfillment are subject to third-party providers, including Shopify
+            and partnered carriers. Any delays or issues related to shipping
+            should be addressed with the respective carrier.
+          </p>
           <p className="text-xl uppercase">4. Returns and Refunds</p>
-          Our refund and return policies are subject to Shopify’s payment
-          processing terms. If you experience an issue with a purchase, please
-          follow the return policy outlined on our Site. Shopify manages refunds
-          and chargebacks in accordance with its policies.
+          <p>
+            Our refund and return policies are subject to Shopify’s payment
+            processing terms. If you experience an issue with a purchase, please
+            follow the return policy outlined on our Site. Shopify manages
+            refunds and chargebacks in accordance with its policies.
+          </p>
           <p className="text-xl uppercase">5. User Conduct</p>
-          By using our Site, you agree not to: Use the Site for any unlawful or
-          fraudulent purposes. Disrupt or interfere with the security or
-          functionality of the Site. Misrepresent information or attempt to gain
-          unauthorized access to accounts.
+          <p>
+            By using our Site, you agree not to: Use the Site for any unlawful
+            or fraudulent purposes. Disrupt or interfere with the security or
+            functionality of the Site. Misrepresent information or attempt to
+            gain unauthorized access to accounts.
+          </p>
           <p className="text-xl uppercase">6. Limitation of Liability</p>
-          The Last Pioneers is not liable for any direct, indirect, incidental,
-          or consequential damages arising from your use of the Site, including
-          but not limited to issues related to transactions, payments, or
-          shipping delays. Shopify handles all financial transactions and is
-          responsible for the security of those transactions.
+          <p>
+            The Last Pioneers is not liable for any direct, indirect,
+            incidental, or consequential damages arising from your use of the
+            Site, including but not limited to issues related to transactions,
+            payments, or shipping delays. Shopify handles all financial
+            transactions and is responsible for the security of those
+            transactions.
+          </p>
           <p className="text-xl uppercase">7. Changes to Terms</p>
-          We reserve the right to modify these Terms at any time. Any updates
-          will be posted on this page with a revised "Last Updated" date. Your
-          continued use of the Site after changes are made constitutes
-          acceptance of the new Terms.
+          <p>
+            We reserve the right to modify these Terms at any time. Any updates
+            will be posted on this page with a revised "Last Updated" date. Your
+            continued use of the Site after changes are made constitutes
+            acceptance of the new Terms.
+          </p>
           <p className="text-xl uppercase">8. Contact Information</p>
-          For any questions or concerns about these Terms, please contact us at
-          [Insert Contact Email]. By using The Last Pioneers, you acknowledge
-          that Shopify is responsible for transaction processing and agree to
-          abide by these Terms.
+          <p>
+            For any questions or concerns about these Terms, please contact us
+            at [Insert Contact Email]. By using The Last Pioneers, you
+            acknowledge that Shopify is responsible for transaction processing
+            and agree to abide by these Terms.
+          </p>
         </section>
       </section>
       <Footer />
