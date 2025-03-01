@@ -5,12 +5,19 @@ export async function getProducts() {
   const { data } = await client.query({
     query: gql`
       query GetProducts {
-        products(first: 10) {
+        products(first: 50) {
           edges {
             node {
               id
               title
               description
+              tags
+              metafields(
+                identifiers: [{ namespace: "custom", key: "preorder" }]
+              ) {
+                key
+                value
+              }
               variants(first: 5) {
                 edges {
                   node {

@@ -19,6 +19,7 @@ interface CartItem {
   price: string;
   stock: number;
   variantTitle: string;
+  tags: string;
 }
 
 // Define Cart Context Type
@@ -89,14 +90,15 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
       resolve(); // Ensures the function resolves after updating state
     });
-    return { cart, addToCart };
+
+    // return { cart, addToCart };
   };
 
-  const updateQuantity = (variantId: string, quantity: number) => {
+  const updateQuantity = (variantId: string, newQuantity: number) => {
     setCart((prevCart) =>
       prevCart.map((item) =>
         item.variantId === variantId
-          ? { ...item, quantity: Math.min(quantity, item.stock || 0) } // Ensure stock is a number
+          ? { ...item, quantity: newQuantity }
           : item,
       ),
     );

@@ -52,13 +52,14 @@ export default function CartPage() {
                   <span className="px-4">{item.quantity}</span>
                   <button
                     onClick={() => {
-                      console.log(
-                        `Increasing ${item.variantTitle} from ${item.quantity} to ${item.quantity + 1}`,
-                      );
-                      updateQuantity(item.variantId, item.quantity + 1);
+                      const newQuantity = item.quantity + 1;
+                      updateQuantity(item.variantId, newQuantity);
                     }}
                     className="px-2 bg-gray-300 rounded"
-                    disabled={item.quantity >= item.stock} // ✅ Disable if at max stock
+                    disabled={
+                      !item.tags.includes("preorder") &&
+                      item.quantity >= item.stock
+                    }
                   >
                     +
                   </button>
