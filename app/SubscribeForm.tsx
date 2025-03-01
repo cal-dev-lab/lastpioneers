@@ -26,8 +26,10 @@ const SubscribeForm = () => {
 
       if (res.status == 200 || res.status == 201) {
         toast({
+          duration: 2000,
           title: "Success!",
           description: "You have been successfully subscribed!",
+
           className:
             "bg-black text-white fixed bottom-4 left-1/2 transform -translate-x-1/2",
         });
@@ -35,6 +37,7 @@ const SubscribeForm = () => {
         setLoading(false);
       } else {
         toast({
+          duration: 2000,
           title: "Uh-oh!",
           description: data.error,
           variant: "destructive",
@@ -45,6 +48,7 @@ const SubscribeForm = () => {
       }
     } catch (error) {
       toast({
+        duration: 2000,
         title: "Uh-oh!",
         description: "An error occurred. Please try again.",
         variant: "destructive",

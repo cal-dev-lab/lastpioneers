@@ -167,6 +167,7 @@ export default function Home() {
                             // ✅ Prevent adding more than available stock
                             if (currentQuantity >= availableStock) {
                               toast({
+                                duration: 2000,
                                 title: "Oops!",
                                 description: `You can't add more than ${availableStock} of this item.`,
                                 variant: "destructive",
@@ -193,6 +194,7 @@ export default function Home() {
 
                           // ✅ Alert user that item was added successfully
                           toast({
+                            duration: 2000,
                             title: "Success!",
                             description: `${node.title} - ${
                               selectedVariant.title === "Default Title"
