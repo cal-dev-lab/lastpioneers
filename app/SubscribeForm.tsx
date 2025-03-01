@@ -1,11 +1,10 @@
 "use client";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast";
 import { Input } from "@/components/ui/input";
+import { toast } from "react-toastify";
 
 const SubscribeForm = () => {
-  const { toast } = useToast();
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -25,35 +24,15 @@ const SubscribeForm = () => {
       const data = await res.json();
 
       if (res.status == 200 || res.status == 201) {
-        toast({
-          duration: 2000,
-          title: "Success!",
-          description: "You have been successfully subscribed!",
-
-          className:
-            "bg-black text-white fixed bottom-4 left-1/2 transform -translate-x-1/2",
-        });
+        toast("You have been successfully subscribed!");
         setEmail("");
         setLoading(false);
       } else {
-        toast({
-          duration: 2000,
-          title: "Uh-oh!",
-          description: data.error,
-          variant: "destructive",
-          className:
-            "bg-black text-white fixed bottom-4 left-1/2 transform -translate-x-1/2",
-        });
+        toast(data.error);
         setLoading(false);
       }
     } catch (error) {
-      toast({
-        duration: 2000,
-        title: "Uh-oh!",
-        description: "An error occurred. Please try again.",
-        variant: "destructive",
-        className: "fixed bottom-4 left-1/2 transform -translate-x-1/2",
-      });
+      toast("An error occured. Please try again.");
       setLoading(false);
     }
   };

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import AnimatedCursor from "react-animated-cursor";
-import { Toaster } from "@/components/ui/toaster";
 import { CartProvider } from "@/context/cart-context";
+import { Bounce, ToastContainer } from "react-toastify";
 
 const sleepyHollow = localFont({
   src: "./fonts/BNSleepyHollow-Clean.otf",
@@ -58,7 +58,19 @@ export default function RootLayout({
             />
           </div>
           {children}
-          <Toaster />
+          <ToastContainer
+            position="top-right"
+            autoClose={2000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+            transition={Bounce}
+          />
         </CartProvider>
       </body>
     </html>

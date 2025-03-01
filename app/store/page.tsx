@@ -5,7 +5,7 @@ import { getProducts } from "@/lib/server-actions";
 import Navigation from "@/components/Navigation";
 import { useCart } from "@/context/cart-context";
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast";
+import { toast } from "react-toastify";
 import Footer from "@/components/Footer";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -16,7 +16,6 @@ type Metafield = {
 
 export default function Home() {
   const { cart, addToCart } = useCart();
-  const { toast } = useToast();
 
   const [products, setProducts] = useState<any[]>([]);
   const [selectedVariants, setSelectedVariants] = useState<{
@@ -166,12 +165,9 @@ export default function Home() {
                           if (!node.tags.includes("preorder")) {
                             // ✅ Prevent adding more than available stock
                             if (currentQuantity >= availableStock) {
-                              toast({
-                                duration: 2000,
-                                title: "Oops!",
-                                description: `You can't add more than ${availableStock} of this item.`,
-                                variant: "destructive",
-                              });
+                              toast(
+                                `You can't add more than ${availableStock} of this item.`,
+                              );
                               return;
                             }
                           }
@@ -192,17 +188,13 @@ export default function Home() {
                             tags: node.tags,
                           });
 
-                          // ✅ Alert user that item was added successfully
-                          toast({
-                            duration: 2000,
-                            title: "Success!",
-                            description: `${node.title} - ${
+                          toast(
+                            `${node.title} - ${
                               selectedVariant.title === "Default Title"
                                 ? "One Size"
                                 : selectedVariant.title
                             } added to cart successfully!`,
-                            className: "bg-black text-white",
-                          });
+                          );
                         }}
                         disabled={
                           !selectedVariants[node.id] ||
