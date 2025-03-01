@@ -53,7 +53,7 @@ export default function TourSection() {
           </div>
         </div>
         <Link href="/tour">
-          <p className="flex justify-end mt-20">MORE DATES &rarr;</p>
+          <p className="flex justify-end mt-20">ALL DATES &rarr;</p>
         </Link>
       </section>
     </section>

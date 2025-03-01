@@ -21,7 +21,7 @@ export default function ListenSection2() {
           <div className="flex flex-col justify-between">
             <div className="md:space-y-20">
               <p className="text-white text-xl">DEBUT EP</p>
-              <p className="text-white text-5xl md:text-7xl">"SQUARE ONE"</p>
+              <p className="text-white text-5xl md:text-7xl">SQUARE ONE</p>
             </div>
             <div className="space-y-4 mt-8 md:mt-0">
               <p className="text-white underline text-lg">
