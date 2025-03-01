@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
+import Link from "next/link";
 
 export default function TermsOfService() {
   return (
@@ -71,9 +72,16 @@ export default function TermsOfService() {
           <p className="text-xl uppercase">8. Contact Information</p>
           <p>
             For any questions or concerns about these Terms, please contact us
-            at [Insert Contact Email]. By using The Last Pioneers, you
-            acknowledge that Shopify is responsible for transaction processing
-            and agree to abide by these Terms.
+            at{" "}
+            <Link
+              href="mailto:contact@thelastpioneers.co.uk"
+              className="underline"
+            >
+              contact@thelastpioneers.co.uk
+            </Link>
+            . By using The Last Pioneers, you acknowledge that Shopify is
+            responsible for transaction processing and agree to abide by these
+            Terms.
           </p>
         </section>
       </section>
