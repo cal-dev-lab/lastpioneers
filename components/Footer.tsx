@@ -12,11 +12,14 @@ export default function Footer() {
           <Link href="/">
             <p className="text-white">HOME</p>
           </Link>
+          <Link href="/tour">
+            <p className="text-white">TOUR</p>
+          </Link>
           <Link href="/store">
             <p className="text-white">STORE</p>
           </Link>
-          <Link href="/tour">
-            <p className="text-white">TOUR</p>
+          <Link href="/terms-of-service">
+            <p className="text-white">TERMS AND CONDITIONS</p>
           </Link>
         </div>
       </div>
