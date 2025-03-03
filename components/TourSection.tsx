@@ -14,25 +14,6 @@ export default function TourSection() {
           <div className="col-span-3 space-y-10">
             <div>
               <div className="grid grid-cols-1 lg:grid-cols-4">
-                <p className="text-2xl">01.03.2025</p>
-                <div className="col-span-2">
-                  <p className="text-2xl">HMV EMPIRE</p>
-                  <p className="">COVENTRY, UK</p>
-                </div>
-                <Link
-                  href="https://www.eventim-light.com/uk/a/62aaf91212e4de0a6a8997a8/e/66f2a6a6b1f3193748396043"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Button className="py-8 mt-4 lg:mt-0 w-full">
-                    <p className="text-xl">BUY TICKETS</p>
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <hr className="border-black" />
-            <div>
-              <div className="grid grid-cols-1 lg:grid-cols-4">
                 <p className="text-2xl">19.04.2025</p>
                 <div className="col-span-2">
                   <p className="text-2xl">FEEL THE NOISE</p>
