@@ -150,7 +150,12 @@ export default function Navigation() {
               onClick={() => setShowMenu(!showMenu)}
               className="text-white text-4xl"
             >
-              {showMenu ? <IoCloseSharp /> : <HiBars2 />}
+              {showMenu ? (
+                <IoCloseSharp />
+              ) : (
+                <span className="text-lg tracking-widest">MENU</span>
+              )}{" "}
+              {/* <HiBars2 /> */}
             </p>
           </div>
         </section>

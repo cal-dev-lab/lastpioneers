@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@apollo/client": "^3.13.1",
+    "@cloudinary/react": "^1.14.1",
+    "@cloudinary/url-gen": "^1.21.0",
     "@mailchimp/mailchimp_marketing": "^3.0.80",
     "@radix-ui/react-scroll-area": "^1.2.1",
     "@radix-ui/react-slot": "^1.1.0",
