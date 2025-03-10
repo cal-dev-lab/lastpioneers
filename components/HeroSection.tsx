@@ -6,12 +6,13 @@ import { PiMouseScrollThin } from "react-icons/pi";
 import { AdvancedVideo } from "@cloudinary/react";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { Button } from "./ui/button";
+import { format, quality } from "@cloudinary/url-gen/actions/delivery";
 
 const cld = new Cloudinary({ cloud: { cloudName: "djzt8qfjt" } });
 const cldVid = cld
   .video("saveinsta.cc_1080p-coming-for-you-official-music-video_aaq1j3")
-  .format("mp4") // Forces MP4 format
-  .quality("auto"); // Optimizes quality
+  .delivery(format("auto")) // Correct way to set format
+  .delivery(quality("auto")); // Correct way to set quality
 
 export default function HeroSection() {
   const videoContainerRef = useRef<HTMLDivElement | null>(null); // Ref for the parent container
