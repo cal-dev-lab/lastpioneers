@@ -36,8 +36,8 @@ export default function HeroSection() {
     }
   }, []);
 
-  // const IMAGE_SOURCE =
-  //   "https://res.cloudinary.com/djzt8qfjt/image/upload/q_auto,f_auto/v1731534719/hero-jpg_xfneoq_p2gebk.avif";
+  const IMAGE_SOURCE =
+    "https://res.cloudinary.com/djzt8qfjt/image/upload/q_auto,f_auto/v1731534719/hero-jpg_xfneoq_p2gebk.avif";
   // const [imageLoaded, setImageLoaded] = useState(false);
   // const [dimensions, setDimensions] = useState({
   //   width: typeof window !== "undefined" ? window.innerWidth : 1920,
@@ -97,6 +97,7 @@ export default function HeroSection() {
           loop
           playsInline
           muted
+          poster={IMAGE_SOURCE}
           // ref={(el) => {
           //   if (el) videoRef.current = el; // Attach actual <video> element
           // }}
