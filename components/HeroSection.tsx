@@ -28,11 +28,9 @@ export default function HeroSection() {
       videoRef.current = videoContainerRef.current.querySelector("video");
 
       if (videoRef.current) {
-        videoRef.current.muted = false; // Try to start unmuted
-        videoRef.current.volume = 1; // Ensure volume is at max
-        videoRef.current.play().catch(() => {
-          // If autoplay with sound is blocked, fallback to muted
-          videoRef.current!.muted = true;
+        videoRef.current.muted = true;
+        videoRef.current.play().catch((err) => {
+          console.warn("Autoplay failed:", err);
         });
       }
     }
@@ -98,6 +96,7 @@ export default function HeroSection() {
           autoPlay
           loop
           playsInline
+          muted
           // ref={(el) => {
           //   if (el) videoRef.current = el; // Attach actual <video> element
           // }}
