@@ -67,6 +67,7 @@ export default function HeroSection() {
 
   //   return () => window.removeEventListener("resize", handleResize);
   // }, []);
+
   return (
     <section id="home" className="-mt-20 md:-mt-32 relative h-screen">
       {/* <div className={`${imageLoaded ? "hidden" : "inline"}`}>
@@ -97,9 +98,9 @@ export default function HeroSection() {
           autoPlay
           loop
           playsInline
-          ref={(el) => {
-            if (el) videoRef.current = el.video; // Attach actual <video> element
-          }}
+          // ref={(el) => {
+          //   if (el) videoRef.current = el; // Attach actual <video> element
+          // }}
         />
       </div>
       <div className="text-white text-3xl flex flex-col gap-2 items-center absolute bottom-10 md:bottom-20 left-1/2 transform -translate-x-1/2">
