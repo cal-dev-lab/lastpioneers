@@ -35,6 +35,24 @@ export default function Tour() {
                 </div>
               </div>
               <hr className="border-black" />
+              <div>
+                <div className="grid grid-cols-1 lg:grid-cols-4">
+                  <p className="text-2xl">30.05.2025</p>
+                  <div className="col-span-2">
+                    <p className="text-2xl">EP LAUNCH SHOW</p>
+                    <p className="">BIRMINGHAM, UK</p>
+                  </div>
+                  <Link
+                    href="https://www.skiddle.com/whats-on/Birmingham/Muthers-Studio/The-Last-Pioneers---Birmingham/40855241/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button className="py-8 mt-4 lg:mt-0 w-full">
+                      <p className="text-xl">BUY TICKETS</p>
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>
