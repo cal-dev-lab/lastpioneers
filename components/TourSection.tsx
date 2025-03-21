@@ -49,6 +49,25 @@ export default function TourSection() {
                 </Link>
               </div>
             </div>
+            <hr className="border-black" />
+            <div>
+              <div className="grid grid-cols-1 lg:grid-cols-4">
+                <p className="text-2xl">10.08.2025</p>
+                <div className="col-span-2">
+                  <p className="text-2xl">DEVA FESTIVAL</p>
+                  <p className="">CHOLMONDELEY CASTLE (MALPAS), UK</p>
+                </div>
+                <Link
+                  href="https://www.devafest.co.uk/Camping"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="py-8 mt-4 lg:mt-0 w-full">
+                    <p className="text-xl">BUY TICKETS</p>
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
         <Link href="/tour">

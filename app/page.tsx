@@ -11,6 +11,7 @@ import VideoSection from "@/components/VideoSection";
 import Footer from "@/components/Footer";
 import TourSection from "@/components/TourSection";
 import ListenSection2 from "@/components/ListenSection2";
+import ShopNowBanner from "@/components/ShopNowBanner";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,6 +28,7 @@ export default function Home() {
     <>
       <Navigation />
       <HeroSection />
+      <ShopNowBanner />
       <ListenSection />
       <ListenSection2 />
       <AboutSection />
